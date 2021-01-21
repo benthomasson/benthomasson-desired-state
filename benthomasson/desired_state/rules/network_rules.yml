@@ -1,0 +1,25 @@
+rules:
+  - rule_selector: root.routers.index
+    inventory_selector: node.name
+    create:
+      tasks: benthomasson.desired_state.create_router
+    update:
+      tasks: benthomasson.desired_state.update_router
+    delete:
+      tasks: benthomasson.desired_state.delete_router
+    retrieve:
+      tasks: benthomasson.desired_state.discover_router
+    validate:
+      tasks: benthomasson.desired_state.validate_router
+  - rule_selector: root.hosts.index
+    inventory_selector: node.name
+    create:
+      tasks: benthomasson.desired_state.create_host
+    update:
+      tasks: benthomasson.desired_state.update_host
+    delete:
+      tasks: benthomasson.desired_state.delete_host
+    retrieve:
+      tasks: benthomasson.desired_state.discover_host
+    validate:
+      tasks: benthomasson.desired_state.validate_host
