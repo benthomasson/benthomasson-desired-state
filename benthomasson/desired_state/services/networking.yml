@@ -1,0 +1,5 @@
+---
+name: networking
+schema: benthomasson.desired_state.network_schema
+rules: benthomasson.desired_state.network_rules
+...
